@@ -19,15 +19,15 @@ The byte layout (from right to left):
 
 The above byte layout corresponds to this message struct:
 ```rust
-    #[repr(packed(1))]
-    pub struct ByteMessage {
-        length: u32,               // 4 bytes
-        ident: u16,                // 2 bytes
-        spare: u16,                // 2 bytes
-        name: [u8; 5],             // 5 bytes
-        unused: u16,               // 2 bytes
-        state: u8                  // 1 byte
-    }
+#[repr(packed(1))]
+pub struct ByteMessage {
+    length: u32,               // 4 bytes
+    ident: u16,                // 2 bytes
+    spare: u16,                // 2 bytes
+    name: [u8; 5],             // 5 bytes
+    unused: u16,               // 2 bytes
+    state: u8                  // 1 byte
+}
 ```
 
 Message struct encoding into array of u8:
