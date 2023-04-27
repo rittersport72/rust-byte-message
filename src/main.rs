@@ -26,4 +26,8 @@ fn main() {
     assert_eq!(message.get_ident(), object.get_ident());
     assert_eq!(message.get_name(), object.get_name());
     assert_eq!(message.get_state(), object.get_state());
+
+    let many: [u8; 23] = [0; 23];
+    let exact = ByteMessage::array_of_byte_message(&many[0..ByteMessage::MESSAGE_LENGTH]);
+    println!("{:?}", exact);
 }

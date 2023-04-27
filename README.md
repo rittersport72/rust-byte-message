@@ -51,6 +51,6 @@ object.from_bytes(&array);
 
 Only a fixed length array of u8 can be decoded. Convert slice of u8 into fixed length array:
 ```rust
-// Create a a fixed length array from a slice
-let fixed_array = ByteMessage::array_of_byte_message(&slice);
+// Create a fixed length array from a slice
+let fixed_array = ByteMessage::array_of_byte_message(&slice[0..ByteMessage::MESSAGE_LENGTH]);
 ```

@@ -57,7 +57,7 @@ impl ByteMessage {
     /*
     * Create fixed length array from slice.
     */
-    fn array_of_byte_message(array: &[u8]) -> [u8; ByteMessage::MESSAGE_LENGTH] {
+    pub fn array_of_byte_message(array: &[u8]) -> [u8; ByteMessage::MESSAGE_LENGTH] {
         array.try_into().expect("slice with incorrect length")
     }
     
